@@ -1,0 +1,2 @@
+# ChinoChat
+Kafuu Chino corpus
