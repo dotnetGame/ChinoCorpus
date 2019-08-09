@@ -17,7 +17,7 @@ def read_data(filename):
         lines = f.readlines()
         begin_record = False
         for each_line in lines:
-            re_line = re.compile(r'Dialogue: (?P<marked>[01]),(?P<start>[0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(?P<end>[0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(?P<style>[0-9a-zA-Z*]+),(?P<name>[0-9a-zA-Z*]+),(?P<marginl>[0-9]{1,4}),(?P<marginr>[0-9]{1,4}),(?P<marginv>[0-9]{1,4}),(?P<effect>.*?),(?P<text>.+)')
+            re_line = re.compile(r'Dialogue: (?P<marked>[01]),(?P<start>[0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(?P<end>[0-9]:[0-9]{2}:[0-9]{2}.[0-9]{2}),(?P<style>[0-9a-zA-Z*]+),(?P<name>[0-9a-zA-Z*]*),(?P<marginl>[0-9]{1,4}),(?P<marginr>[0-9]{1,4}),(?P<marginv>[0-9]{1,4}),(?P<effect>.*?),(?P<text>.+)')
             match = re_line.match(each_line.strip())
             if match:
                 if begin_record:
