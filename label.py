@@ -57,7 +57,7 @@ def main(argv):
         print('   or: mark.py --input=<input_path> --output=<output_path>')
         sys.exit(2)
 
-    character_table = ['unk', 'chino', 'kokoa', 'rize', 'teitsupi', 'takahiro', 'chiya', 'sharo']
+    character_table = ['unk', 'chino', 'kokoa', 'rize', 'thippi', 'takahiro', 'chiya', 'sharo']
     lines = read_data(input_path)
     mark_characters(lines, character_table)
     write_data(output_path, lines)
