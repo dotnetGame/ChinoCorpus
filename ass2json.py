@@ -7,7 +7,7 @@ import getopt
     'source': '00-00',
     'start': '0:00:00.00',
     'end': '0:00:00.00',
-    'name': 'unk',
+    'name': [],
     'text': ''
 }
 '''
@@ -25,7 +25,7 @@ def read_data(filename):
                         'source': '01-01',
                         'start': match.group('start'),
                         'end': match.group('end'),
-                        'name': 'unk',
+                        'name': [],
                         'text': match.group('text')
                     })
                 if match.group('text') == '----------TXT----------':

@@ -24,15 +24,27 @@ def mark_characters(lines, character_table):
     for i, each_char in enumerate(character_table):
         print(f'press {i}: {each_char}')
     
-    for each_line in lines:
+    i = 0
+    while i < len(lines):
+        each_line = lines[i]
+
         name = each_line['name']
         line = each_line['text']
         print(f'character: {name}, text: {line}')
 
         val = input('please input character: ')
 
-        if val.isdigit():
-            each_line['name'] = character_table[int(val)]
+        if val == 'b' and i > 0:
+            print('back to previous data:')
+            i -= 1
+            continue
+        
+        each_line['name'] = []
+        for each_char in val:
+            if each_char.isdigit():
+                each_line['name'].append(character_table[int(each_char)])
+        
+        i += 1
 
 
 
